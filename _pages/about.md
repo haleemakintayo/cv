@@ -58,7 +58,7 @@ More info about configuring Academic Pages can be found in [the guide](https://a
 ## Selected Publications
 <ul>
 {% assign publicationsByDate = site.publications | sort: 'date' | reverse %}
-{% for post in publicationsByDate limit:5 %}
+{% for post in publicationsByDate limit:8 %}
   <li>
     <a href="{{ baseurl }}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date: "%Y" }})<br>
     <i>{{ post.venue }}</i>

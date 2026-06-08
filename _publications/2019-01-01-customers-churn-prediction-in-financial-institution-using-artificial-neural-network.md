@@ -1,0 +1,17 @@
+---
+title: "Customers Churn Prediction in Financial Institution Using Artificial Neural Network"
+collection: publications
+category: manuscripts
+permalink: /publication/2019-01-01-customers-churn-prediction-in-financial-institution-using-artificial-neural-network
+excerpt: 'In this study, a predictive model using Multi-layer Perceptron of Artificial Neural Network architecture was developed to predict customer churn in a financial institution. Previous researches have used supervised machine learning classifiers such as Logistic Regression, Decision Tree, Support Vector Machine, K-Nearest Neighbors, and Random Forest. These classifiers require human effort to perform feature engineering which leads to over-specified and incomplete feature selection. Therefore, this research developed a model to eliminate manual feature engineering in data preprocessing stage. Fifty thousand customers? data were extracted from the database of one of the leading financial institution in Nigeria for the study. The multi-layer perceptron model was built with python programming language and used two overfitting techniques (Dropout and L2 regularization). The implementation done in python was compared with another model in Neuro solution infinity software. The results showed that the Artificial Neural Network software development (Python) had comparable performance with that obtained from the Neuro Solution Infinity software. The accuracy rates are 97.53% and 97.4% while ROC (Receiver Operating Characteristic) curve graphs are 0.89 and 0.85 respectively.'
+date: 2019-01-01
+venue: 'arXiv.org'
+paperurl: 'https://www.semanticscholar.org/paper/f3fae20cb3d0e411ce28aacfced7acf5165e2e9f'
+citation: 'K. Amuda, A. B. Adeyemo. (2019). &quot;Customers Churn Prediction in Financial Institution Using Artificial Neural Network.&quot; *arXiv.org*.'
+---
+
+<a href='https://www.semanticscholar.org/paper/f3fae20cb3d0e411ce28aacfced7acf5165e2e9f'>Download paper here</a>
+
+In this study, a predictive model using Multi-layer Perceptron of Artificial Neural Network architecture was developed to predict customer churn in a financial institution. Previous researches have used supervised machine learning classifiers such as Logistic Regression, Decision Tree, Support Vector Machine, K-Nearest Neighbors, and Random Forest. These classifiers require human effort to perform feature engineering which leads to over-specified and incomplete feature selection. Therefore, this research developed a model to eliminate manual feature engineering in data preprocessing stage. Fifty thousand customers? data were extracted from the database of one of the leading financial institution in Nigeria for the study. The multi-layer perceptron model was built with python programming language and used two overfitting techniques (Dropout and L2 regularization). The implementation done in python was compared with another model in Neuro solution infinity software. The results showed that the Artificial Neural Network software development (Python) had comparable performance with that obtained from the Neuro Solution Infinity software. The accuracy rates are 97.53% and 97.4% while ROC (Receiver Operating Characteristic) curve graphs are 0.89 and 0.85 respectively.
+
+Recommended citation: K. Amuda, A. B. Adeyemo. (2019). "Customers Churn Prediction in Financial Institution Using Artificial Neural Network." *arXiv.org*.

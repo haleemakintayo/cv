@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Speech Emotion Recognition Using MFCC Features and LSTM-Based Deep Learning Model",
+        "year": 2026,
+        "venue": "Preprint/Unknown",
+        "link": "https://www.semanticscholar.org/paper/2200628468e50d759512a79923896b8a126f7298",
+        "citations": 0,
+        "authors": "Adelekun Oluwademilade, Ademola Adedamola, A. AbdulHakeem, Akinpelu Azeezat, Eraiyetan Israel, Omotosho Oluwadunsin, Ibenye Ikechukwu, A. Muhammad, Olusanya O. Olamide, K. Amuda",
+        "abstract": "Speech Emotion Recognition (SER) is the use of machines to detect the emotional state of humans based on the speech, which is gaining importance in natural human-computer interaction. Speech is a very valuable source of information, as emotions modify the patterns of speech; pitch, energy and even timing. Nonetheless, SER is not an easy task because speakers are not constant, and situations vary when recording and the sound similarity between specific feelings. In this work, the author introduces a speech emotion recognition system relying on the Mel-Frequency Cepstral Coefficient and Long Short-Term Memory (LSTM) neural network, as a feature extraction method. The Toronto Emotional Speech Set (TESS) speech signal was pre-processed, and transformed into MFCC features to understand the important aspects in terms of time. The resultant features were then introduced to LSTM model, which is able to learn long term features of sequential audio data. The trained model was measured over several emotion classes occurring in the dataset. As seen in the results of experiments, the proposed MFCC-LSTM approach succeeds in capturing the patterns of emotions in speech and provides highly realistic classifications in all the chosen emotion classifications. This study presents a speech emotion recognition system using Mel-Frequency Cepstral Coefficients (MFCCs) as features and a deep learning LSTM classifier. A Support Vector Machine (SVM) with an RBF kernel served as a classical baseline, achieving 98% accuracy, against which the proposed LSTM model, achieving 99% accuracy, was validated. Overall, it is possible to confirm that LSTM-based architectures can be used to address the task of speech emotion recognition. Actual applications of the proposed system may be virtual assistants and mental health surveillance."
+    },
+    {
+        "title": "Detecting SARS-CoV-2 in CT Scans Using Vision Transformer and Graph Neural Network",
+        "year": 2025,
+        "venue": "Algorithms",
+        "link": "https://www.semanticscholar.org/paper/2bbaae4c0803990a13c2a57f1e0f64f0c787ecd0",
+        "citations": 5,
+        "authors": "K. Amuda, A.L.M.U.S.T.A.P.H.A.A. Wakili, Tomilade Amoo, Lukman Agbetu, Qianlong Wang, J. Feng",
+        "abstract": "The COVID-19 pandemic has presented significant challenges to global healthcare, bringing out the urgent need for reliable diagnostic tools. Computed Tomography (CT) scans have proven instrumental in detecting COVID-19-induced lung abnormalities. This study introduces Convolutional Neural Network, Graph Neural Network, and Vision Transformer (ViTGNN), an advanced hybrid model designed to enhance SARS-CoV-2 detection by combining Graph Neural Networks (GNNs) for feature extraction with Vision Transformers (ViTs) for classification. Using the strength of CNN and GNN to capture complex relational structures and the ViT capacity to classify global contexts, ViTGNN achieves a comprehensive representation of CT scan data. The model was evaluated on a SARS-CoV-2 CT scan dataset, demonstrating superior performance across all metrics compared to baseline models. The model achieved an accuracy of 95.98%, precision of 96.07%, recall of 96.01%, F1-score of 95.98%, and AUC of 98.69%, outperforming existing approaches. These results indicate that ViTGNN is an effective diagnostic tool that can be applied beyond COVID-19 detection to other medical imaging tasks."
+    },
+    {
+        "title": "Revolutionizing Networking Paradigms: A Comprehensive Exploration of Information-Centric Networking (ICN), Content-Centric Networking(CCNx) and Named Data Networking (NDN)",
+        "year": 2024,
+        "venue": "arXiv.org",
+        "link": "https://www.semanticscholar.org/paper/daa7db9766e83ace473e6986f9f703a6b9065be4",
+        "citations": 2,
+        "authors": "K. Amuda, Almustapha A. Wakili, Binkam Deepak, Ciana Hoggard, Pranay Tiruveedula",
+        "abstract": "The evolution of networking paradigms has led to the emergence of Information-Centric Networking (ICN), Content-centric networking (CCNx), and Named Data Networking (NDN). These innovative architectures move away from traditional host-centric models to focus on content-oriented approaches. This paper offers a succinct understanding and in-depth exploration of these revolutionary networking frameworks. It explores into their foundational concepts, technical principles, and the latest developments. Also, the paper examines the current standards that govern these architectures and discusses their practical applications in the real world. By providing a comprehensive overview, this study aims to highlight how ICN, CCNx, and NDN are reshaping the landscape of digital communications, emphasizing efficiency, security, and scalability in data handling and distribution across networks."
+    },
+    {
+        "title": "Summary of Point Transformer with Federated Learning for Predicting Breast Cancer HER2 Status from Hematoxylin and Eosin-Stained Whole Slide Images",
+        "year": 2024,
+        "venue": "arXiv.org",
+        "link": "https://www.semanticscholar.org/paper/e67d19259dea5609febfe6ae0637f004b57596f8",
+        "citations": 0,
+        "authors": "K. Amuda, Almustapha A. Wakili",
+        "abstract": "This study introduces a federated learning-based approach to predict HER2 status from hematoxylin and eosin (HE)-stained whole slide images (WSIs), reducing costs and speeding up treatment decisions. To address label imbalance and feature representation challenges in multisite datasets, a point transformer is proposed, incorporating dynamic label distribution, an auxiliary classifier, and farthest cosine sampling. Extensive experiments demonstrate state-of-the-art performance across four sites (2687 WSIs) and strong generalization to two unseen sites (229 WSIs)."
+    },
+    {
+        "title": "Voice Information Retrieval In Collaborative Information Seeking",
+        "year": 2021,
+        "venue": "arXiv.org",
+        "link": "https://www.semanticscholar.org/paper/2fb87c024dbafe4a782a161393bdbd1abaed933e",
+        "citations": 1,
+        "authors": "Sulaiman Adesegun Kukoyi, O. Onifade, K. Amuda",
+        "abstract": "Voice information retrieval is a technique that provides Information Retrieval System with the capacity to transcribe spoken queries and use the text output for information search. CIS is a field of research that involves studying the situation, motivations, and methods for people working in a collaborative group for information seeking projects, as well as building a system for supporting such activities. Humans find it easier to communicate and express ideas via speech. Existing voice search like Google and other mainstream voice search does not support collaborative search. The spoken speeches passed through the ASR for feature extraction using MFCC and HMM, Viterbi algorithm precisely for pattern matching. The result of the ASR is then passed as input into CIS System, results is then filtered to have an aggregate result. The result from the simulation shows that our model was able to achieve 81.25% transcription accuracy."
+    },
+    {
+        "title": "Multi-classification of alzheimer disease on magnetic resonance images (MRI) using deep convolutional neural network (DCNN) approaches",
+        "year": 2021,
+        "venue": "International journal of advanced computing research",
+        "link": "https://www.semanticscholar.org/paper/37f892bff15a71a3ef3d89a804a20444f988de7a",
+        "citations": 113,
+        "authors": "S. Ajagbe, K. Amuda, M. A. Oladipupo, Oluwaseyi F. Afe, Kikelomo I. Okesola",
+        "abstract": "Alzheimer\u2019s disease (AD) is the most popular cause of dementia. Dementia refers to a continuous decline in mental ability. The developmental stages of this neuropsychiatric symptom are usually examined using medical images of the brain. Cutting edge technologies, including computer algorithms have been applied to the diagnosis and treatments of AD, especially in the area of detection and classification. These technologies have eased up the work of medical experts and provided faster ways of medical delivery. This study was aimed at advancing AD image classification with deep convolutional neural network (DCNN) involving convolutional neural network (CNN) and transfer learning (Visual Geometry Group (VGG)16 and VGG19) using magnetic resonance images (MRI) and extend the evaluation metrics since limitations and capacity of algorithms cannot be revealed by few metrics. The objectives of this research are to classify AD images into four known classes by neurologists and results of the finding are subjected to many evaluation metrics. This research used computer algorithms majorly DCNN and transfer learning to classify AD. Six metrics were used for the evaluation; accuracy, area under curve (AUC), F1-score, precision, recall and computational time. VGG-19 was the best in three, CNN was the best in two and VGG-16 was the best in one. Conclusively, this study has proven that computer algorithms are capable of classifying AD into four classes known to medical experts."
+    },
+    {
+        "title": "Nuclear Heat Storage & Recovery System Design for the APR1400",
+        "year": 2019,
+        "venue": "Transactions of the American Nuclear Society",
+        "link": "https://www.semanticscholar.org/paper/e01066356fbe603b307d7c47a5fbbf8539b8d6c2",
+        "citations": 3,
+        "authors": "K. Amuda, A. Ashong, R. Field",
+        "abstract": null
+    },
+    {
+        "title": "Customers Churn Prediction in Financial Institution Using Artificial Neural Network",
+        "year": 2019,
+        "venue": "arXiv.org",
+        "link": "https://www.semanticscholar.org/paper/f3fae20cb3d0e411ce28aacfced7acf5165e2e9f",
+        "citations": 18,
+        "authors": "K. Amuda, A. B. Adeyemo",
+        "abstract": "In this study, a predictive model using Multi-layer Perceptron of Artificial Neural Network architecture was developed to predict customer churn in a financial institution. Previous researches have used supervised machine learning classifiers such as Logistic Regression, Decision Tree, Support Vector Machine, K-Nearest Neighbors, and Random Forest. These classifiers require human effort to perform feature engineering which leads to over-specified and incomplete feature selection. Therefore, this research developed a model to eliminate manual feature engineering in data preprocessing stage. Fifty thousand customers? data were extracted from the database of one of the leading financial institution in Nigeria for the study. The multi-layer perceptron model was built with python programming language and used two overfitting techniques (Dropout and L2 regularization). The implementation done in python was compared with another model in Neuro solution infinity software. The results showed that the Artificial Neural Network software development (Python) had comparable performance with that obtained from the Neuro Solution Infinity software. The accuracy rates are 97.53% and 97.4% while ROC (Receiver Operating Characteristic) curve graphs are 0.89 and 0.85 respectively."
+    }
+]

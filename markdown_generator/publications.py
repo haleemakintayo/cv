@@ -14,9 +14,11 @@
 import csv
 import os
 import sys
+import json
+import re
 
 # Flag to indicate an error occurred
-EXIT_ERROR = 0
+EXIT_ERROR = 1
 
 # The expected layout of the CSV / TSV file
 HEADER_LEGACY  = ['pub_date', 'title', 'venue', 'excerpt', 'citation', 'url_slug', 'paper_url', 'slides_url']
@@ -31,42 +33,67 @@ HTML_ESCAPE_TABLE = {
     "'": "&apos;"
     }
 
+def slugify(text):
+    """Convert title to a URL-friendly slug."""
+    text = text.lower()
+    return re.sub(r'[^a-z0-9]+', '-', text).strip('-')
+
 # This is where the heavy lifting is done. This loops through all the rows in the TSV dataframe, then starts to
 # concatenate a big string (```md```) that contains the markdown for each type. It does the YAML metadata first, then
 # does the description for the individual page.
-def create_md(lines: list, layout: list):
+def create_md(lines: list, layout: list = None):
     for item in lines:
+        # Handle dictionary (from JSON) or list (from CSV/TSV)
+        if isinstance(item, dict):
+            title = item.get('title', 'Untitled')
+            pub_date = f"{item.get('year', '2024')}-01-01"
+            venue = item.get('venue', 'Unknown Venue')
+            excerpt = item.get('abstract', '')
+            paper_url = item.get('link', '')
+            citation = item.get('citation') or f"{item.get('authors', 'Unknown')}. ({item.get('year', '2024')}). \"{title}.\" *{venue}*."
+            url_slug = slugify(title)
+            category = 'manuscripts'
+        else:
+            pub_date = item[layout.index('pub_date')]
+            title = item[layout.index('title')]
+            venue = item[layout.index('venue')]
+            excerpt = item[layout.index('excerpt')]
+            citation = item[layout.index('citation')]
+            url_slug = item[layout.index('url_slug')]
+            paper_url = item[layout.index('paper_url')]
+            category = item[layout.index('category')] if 'category' in layout else 'manuscripts'
+
         # Parse the filename information
-        md_filename = f"{item[layout.index('pub_date')]}-{item[layout.index('url_slug')]}.md"
-        html_filename = str(item[layout.index('pub_date')]) + "-" + item[layout.index('url_slug')]
+        md_filename = f"{pub_date}-{url_slug}.md"
+        html_filename = f"{pub_date}-{url_slug}"
         
         # Parse the YAML variables
-        md = f"---\ntitle: \"{item[layout.index('title')]}\"\n"
-        md += "collection: publications"
-        if len(layout) == len(HEADER_UPDATED):
-            md += f"\ncategory: {item[layout.index('category')]}"
-        else:
-            md += "\ncategory: manuscripts"
-        md += f"\npermalink: /publication/{html_filename}"
-        if len(str(item[layout.index('excerpt')])) > 5:
-            md += f"\nexcerpt: '{html_escape(item[layout.index('excerpt')])}'"
-        md += f"\ndate: {item[layout.index('pub_date')]}"
-        md += f"\nvenue: '{html_escape(item[layout.index('venue')])}'"
-        if len(str(item[layout.index('paper_url')])) > 5:
-            md += f"\npaperurl: '{item[layout.index('paper_url')]}'"
-        md += f"\ncitation: '{html_escape(item[layout.index('citation')])}'"
-        md += "\n---"
+        md = f"---\ntitle: \"{title}\"\n"
+        md += "collection: publications\n"
+        md += f"category: {category}\n"
+        md += f"permalink: /publication/{html_filename}\n"
+        if len(str(excerpt)) > 5:
+            md += f"excerpt: '{html_escape(str(excerpt))}'\n"
+        md += f"date: {pub_date}\n"
+        md += f"venue: '{html_escape(str(venue))}'\n"
+        if len(str(paper_url)) > 5:
+            md += f"paperurl: '{paper_url}'\n"
+        md += f"citation: '{html_escape(str(citation))}'\n"
+        md += "---\n"
         
         # Markdown description for individual page
-        if len(str(item[layout.index('paper_url')])) > 5:
-            md += f"\n<a href='{item[layout.index('paper_url')]}'>Download paper here</a>\n"
-        if len(str(item[layout.index('excerpt')])) > 5:
-            md += f"\n{html_escape(item[layout.index('excerpt')])}\n"
-        md += f"\nRecommended citation: {item[layout.index('citation')]}"
+        if len(str(paper_url)) > 5:
+            md += f"\n<a href='{paper_url}'>Download paper here</a>\n"
+        if len(str(excerpt)) > 5:
+            md += f"\n{html_escape(str(excerpt))}\n"
+        md += f"\nRecommended citation: {citation}"
         
         # Write the file
-        md_filename = os.path.join("../_publications/", os.path.basename(md_filename))
-        with open(md_filename, 'w') as f:
+        out_dir = "../_publications/"
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
+        md_filename = os.path.join(out_dir, os.path.basename(md_filename))
+        with open(md_filename, 'w', encoding='utf-8') as f:
             f.write(md)
 
 def html_escape(text):
@@ -78,6 +105,11 @@ def read(filename: str) -> tuple[list, list]:
 
     # Read the contents of the file
     lines = []
+    if filename.endswith('.json'):
+        with open(filename, 'r', encoding='utf-8') as file:
+            lines = json.load(file)
+        return lines, None
+
     with open(filename, 'r') as file:
         delimiter = ',' if filename.endswith('.csv') else '\t'
         reader = csv.reader(file, delimiter=delimiter)
@@ -110,8 +142,8 @@ if __name__ == '__main__':
 
     # Make sure the filename is TSV or CSV
     filename = sys.argv[1]
-    if not (filename.endswith('.csv') or filename.endswith('.tsv')):
-        print(f'Expected a TSV or CSV file, got {filename}', file=sys.stderr)
+    if not (filename.endswith('.csv') or filename.endswith('.tsv') or filename.endswith('.json')):
+        print(f'Expected a TSV, CSV, or JSON file, got {filename}', file=sys.stderr)
         sys.exit(EXIT_ERROR)    
 
     # Read and process the lines

@@ -1,0 +1,17 @@
+---
+title: "Detecting SARS-CoV-2 in CT Scans Using Vision Transformer and Graph Neural Network"
+collection: publications
+category: manuscripts
+permalink: /publication/2025-01-01-detecting-sars-cov-2-in-ct-scans-using-vision-transformer-and-graph-neural-network
+excerpt: 'The COVID-19 pandemic has presented significant challenges to global healthcare, bringing out the urgent need for reliable diagnostic tools. Computed Tomography (CT) scans have proven instrumental in detecting COVID-19-induced lung abnormalities. This study introduces Convolutional Neural Network, Graph Neural Network, and Vision Transformer (ViTGNN), an advanced hybrid model designed to enhance SARS-CoV-2 detection by combining Graph Neural Networks (GNNs) for feature extraction with Vision Transformers (ViTs) for classification. Using the strength of CNN and GNN to capture complex relational structures and the ViT capacity to classify global contexts, ViTGNN achieves a comprehensive representation of CT scan data. The model was evaluated on a SARS-CoV-2 CT scan dataset, demonstrating superior performance across all metrics compared to baseline models. The model achieved an accuracy of 95.98%, precision of 96.07%, recall of 96.01%, F1-score of 95.98%, and AUC of 98.69%, outperforming existing approaches. These results indicate that ViTGNN is an effective diagnostic tool that can be applied beyond COVID-19 detection to other medical imaging tasks.'
+date: 2025-01-01
+venue: 'Algorithms'
+paperurl: 'https://www.semanticscholar.org/paper/2bbaae4c0803990a13c2a57f1e0f64f0c787ecd0'
+citation: 'K. Amuda, A.L.M.U.S.T.A.P.H.A.A. Wakili, Tomilade Amoo, Lukman Agbetu, Qianlong Wang, J. Feng. (2025). &quot;Detecting SARS-CoV-2 in CT Scans Using Vision Transformer and Graph Neural Network.&quot; *Algorithms*.'
+---
+
+<a href='https://www.semanticscholar.org/paper/2bbaae4c0803990a13c2a57f1e0f64f0c787ecd0'>Download paper here</a>
+
+The COVID-19 pandemic has presented significant challenges to global healthcare, bringing out the urgent need for reliable diagnostic tools. Computed Tomography (CT) scans have proven instrumental in detecting COVID-19-induced lung abnormalities. This study introduces Convolutional Neural Network, Graph Neural Network, and Vision Transformer (ViTGNN), an advanced hybrid model designed to enhance SARS-CoV-2 detection by combining Graph Neural Networks (GNNs) for feature extraction with Vision Transformers (ViTs) for classification. Using the strength of CNN and GNN to capture complex relational structures and the ViT capacity to classify global contexts, ViTGNN achieves a comprehensive representation of CT scan data. The model was evaluated on a SARS-CoV-2 CT scan dataset, demonstrating superior performance across all metrics compared to baseline models. The model achieved an accuracy of 95.98%, precision of 96.07%, recall of 96.01%, F1-score of 95.98%, and AUC of 98.69%, outperforming existing approaches. These results indicate that ViTGNN is an effective diagnostic tool that can be applied beyond COVID-19 detection to other medical imaging tasks.
+
+Recommended citation: K. Amuda, A.L.M.U.S.T.A.P.H.A.A. Wakili, Tomilade Amoo, Lukman Agbetu, Qianlong Wang, J. Feng. (2025). "Detecting SARS-CoV-2 in CT Scans Using Vision Transformer and Graph Neural Network." *Algorithms*.
